@@ -3,6 +3,7 @@ package com.example.quizapp.ui.score
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import com.example.quizapp.databinding.ActivityScoreBinding
 import com.example.quizapp.ui.main.MainActivity
 
@@ -16,6 +17,8 @@ class ScoreActivity : AppCompatActivity() {
     private lateinit var scoreBinding: ActivityScoreBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        // Handle the splash screen transition.
+        val splashScreen = installSplashScreen()
         super.onCreate(savedInstanceState)
         scoreBinding = ActivityScoreBinding.inflate(layoutInflater)
         setContentView(scoreBinding.root)
